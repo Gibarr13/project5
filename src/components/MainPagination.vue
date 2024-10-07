@@ -1,11 +1,11 @@
 <template>
-<div>
+<div class="flex justify-center gap-6 p-10">
 
-    <button @click="prevPage" :disabled="activePage === 1">PREV</button>
+    <button @click="prevPage" :disabled="activePage === 1" class="rounded-md bg-slate-100 p-4 font medium text-slate-900 shadow-emerald-300">PREV</button>
 
-    <button v-for="page in pages" :key="page" class=""> {{ page }}</button>
+    <button v-for="page in pages" :key="page" class="rounded-md bg-slate-100 p-4 font medium text-slate-900 shadow-emerald-300" :class="page === activePage ? 'bg-yellow-300 text-slate-100': ''"> {{ page }}</button>
 
-    <button @click="nextPage" :disabled="activePage === pages">NEXT</button>
+    <button @click="nextPage" :disabled="activePage === pages" class="rounded-md bg-slate-100 p-4 font medium text-slate-900 shadow-emerald-300">NEXT</button>
 
 </div>
 
